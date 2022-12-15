@@ -20,7 +20,7 @@ public final class CraftingDeadSpawn extends JavaPlugin {
         plugin = this;
 
         createSpawnConfig();
-        this.getCommand("setspawn").setExecutor(new Teleport());
+        this.getCommand("cdsetspawn").setExecutor(new Teleport());
         this.getCommand("randomspawn").setExecutor(new Teleport());
 
     }

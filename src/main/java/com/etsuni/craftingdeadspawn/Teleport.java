@@ -60,7 +60,7 @@ public class Teleport implements CommandExecutor {
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
         if(sender instanceof Player) {
             Player player = (Player) sender;
-            if(command.getName().equalsIgnoreCase("setspawn")) {
+            if(command.getName().equalsIgnoreCase("cdsetspawn")) {
                 Location location = player.getLocation();
                 addSpawnPoint(location);
                 return true;

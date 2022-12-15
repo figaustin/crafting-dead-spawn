@@ -3,7 +3,7 @@ version: '${project.version}'
 main: com.etsuni.craftingdeadspawn.CraftingDeadSpawn
 api-version: 1.18
 commands:
-  setspawn:
+  cdsetspawn:
     description: Set a new random spawn point
     permission: craftingdead.setspawn
     permission-message: You do not have permissions to use this command.
