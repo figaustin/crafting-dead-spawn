@@ -1,0 +1,21 @@
+name: CraftingDeadSpawn
+version: '${project.version}'
+main: com.etsuni.craftingdeadspawn.CraftingDeadSpawn
+api-version: 1.18
+commands:
+  setspawn:
+    description: Set a new random spawn point
+    permission: craftingdead.setspawn
+    permission-message: You do not have permissions to use this command.
+  randomspawn:
+    description: Teleport sender to random spawn point
+    permission: craftingdead.randomspawn
+    permission-message: You do not have permissions to use this command.
+    aliases: [rspawn, rtp]
+permissions:
+  craftingdead.randomspawn:
+    description: Allows player to use randomspawn command
+
+  craftingdead.setspawn:
+    description: Allows player to set a random spawn
+    permission-message: You do not have permissions to use this command.
