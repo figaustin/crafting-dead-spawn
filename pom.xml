@@ -6,7 +6,7 @@
 
     <groupId>com.etsuni</groupId>
     <artifactId>CraftingDeadSpawn</artifactId>
-    <version>1.0.1</version>
+    <version>1.0.2</version>
     <packaging>jar</packaging>
 
     <name>CraftingDeadSpawn</name>
@@ -39,7 +39,6 @@
                         </goals>
                         <configuration>
                             <createDependencyReducedPom>false</createDependencyReducedPom>
-                            <outputDirectory>D:\MyStuff\plugin test server\plugins</outputDirectory>
                         </configuration>
                     </execution>
                 </executions>

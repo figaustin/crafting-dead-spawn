@@ -1,6 +1,7 @@
 package com.etsuni.craftingdeadspawn;
 
 import org.bukkit.Bukkit;
+import org.bukkit.ChatColor;
 import org.bukkit.Location;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
@@ -69,6 +70,15 @@ public class Teleport implements CommandExecutor {
                 randomTp(player);
                 return true;
             }
+            else if(command.getName().equalsIgnoreCase("reloadspawns")) {
+                if(plugin.reloadSpawns()) {
+                    sender.sendMessage(ChatColor.GREEN + "Reloaded random spawns config.");
+                }
+                else {
+                    sender.sendMessage(ChatColor.RED + "Could not find random spawns config");
+                }
+            }
+
         }
         return false;
     }

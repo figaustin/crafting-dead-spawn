@@ -22,6 +22,7 @@ public final class CraftingDeadSpawn extends JavaPlugin {
         createSpawnConfig();
         this.getCommand("cdsetspawn").setExecutor(new Teleport());
         this.getCommand("randomspawn").setExecutor(new Teleport());
+        this.getCommand("reloadspawns").setExecutor(new Teleport());
 
     }
 
@@ -29,7 +30,6 @@ public final class CraftingDeadSpawn extends JavaPlugin {
     public void onDisable() {
         // Plugin shutdown logic
     }
-
 
     private void createSpawnConfig() {
         customConfigFile = new File(getDataFolder(), "spawns.yml");
@@ -54,6 +54,18 @@ public final class CraftingDeadSpawn extends JavaPlugin {
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
+    }
+
+    public Boolean reloadSpawns() {
+        if(!customConfigFile.exists()) {
+            return false;
+        }
+        customConfig = YamlConfiguration.loadConfiguration(customConfigFile);
+        return true;
+    }
+
+    public void setCustomConfig(FileConfiguration fileConfiguration) {
+        this.customConfig = fileConfiguration;
     }
 
     public FileConfiguration getSpawnsConfig() {

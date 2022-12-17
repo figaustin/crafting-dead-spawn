@@ -12,10 +12,14 @@ commands:
     permission: craftingdead.randomspawn
     permission-message: You do not have permissions to use this command.
     aliases: [rspawn, rtp]
+  reloadspawns:
+    description: Reload the random spawns file.
+    permission: craftingdead.reloadspawns
+    permission-message: You do not have permissions to use this command.
 permissions:
   craftingdead.randomspawn:
     description: Allows player to use randomspawn command
-
   craftingdead.setspawn:
     description: Allows player to set a random spawn
-    permission-message: You do not have permissions to use this command.
+  craftingdead.spawnsconfig:
+    description: Allows player to reload the random spawns file.
